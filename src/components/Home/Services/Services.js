@@ -1,52 +1,15 @@
-import React from 'react';
-import icon1 from '../../../images/icon1.png';
-import icon2 from '../../../images/icon2.png';
-import icon3 from '../../../images/icon3.png';
-import icon4 from '../../../images/icon4.png';
-import icon5 from '../../../images/icon5.png';
-import icon6 from '../../../images/icon6.png';
+import React, { useEffect, useState } from 'react';
 import ServiceDetail from '../ServiceDetail/ServiceDetail';
 
 const Services = () => {
-    const serviceData = [
-        {
-            name: 'Software Development',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, quaerat?',
-            price: '$349',
-            img: icon1
-        },
-        {
-            name: 'Web Development',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, quaerat?',
-            price: '$429',
-            img: icon2
-        },
-        {
-            name: 'Analytic Solutions',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, quaerat?',
-            price: '$279',
-            img: icon3
-        },
-        {
-            name: 'Cloud & DevOps',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, quaerat?',
-            price: '$249',
-            img: icon4
-        },
-        {
-            name: 'Product & Design',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, quaerat?',
-            price: '$329',
-            img: icon5
-        },
-        {
-            name: 'Database Administrator',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, quaerat?',
-            price: '$279',
-            img: icon6
-        }
-    ]
 
+    const [services, setServices] = useState([])
+    useEffect(() => {
+        fetch('http://localhost:5000/allServices')
+            .then(res => res.json())
+            .then(data => setServices(data))
+    }, [])
+    
     return (
         <section className="mt-5">
             <div className="text-center">
@@ -56,8 +19,9 @@ const Services = () => {
             <div className="d-flex justify-content-center">
                 <div className="w-75 row pt-2">
                     {
-                        serviceData.map(service => <ServiceDetail service={service} key={service.name}></ServiceDetail>)
+                        services.map(service => <ServiceDetail service={service} key={service.title}></ServiceDetail>)
                     }
+
                 </div>
             </div>
         </section>

@@ -1,0 +1,30 @@
+.MakeAdmin {
+    background-color: #F4F7FC;
+    height: calc(100vh - 80px)
+}
+
+.MakeAdmin input {
+    width: 450px;
+    height: 40px;
+    display: inline;
+}
+
+.MakeAdmin button {
+    height: 40px;
+    transform: translateY(-1px);
+    margin-left: 7px;
+}
+
+@media screen and (max-width: 576px) {
+    .MakeAdmin input{
+        width: 100%
+    }
+    .MakeAdmin button {
+        margin-left: 0;
+        margin-top: 7px;
+    }
+}
+
+.MakeAdmin input::placeholder {
+    color: #C9C9C9;
+}

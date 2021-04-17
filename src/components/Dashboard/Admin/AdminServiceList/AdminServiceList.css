@@ -1,0 +1,33 @@
+.service-list {
+    background-color: #F4F7FC;
+    height: calc(100vh - 80px)
+}
+
+.all-services {
+    background-color: #ffffff;
+    border-radius: 20px;
+    height: 100%;
+    overflow-x: scroll;
+}
+
+.all-services thead tr {
+    height: 54px;
+    background: #F5F6FA;
+    border-radius: 30px !important;
+}
+
+.selectDropdown {
+    border: none;
+}
+
+.selectDropdown option[value="On Going"] {
+    color: #FFBD3E;
+}
+
+.selectDropdown option[value="Pending"] {
+    color: #FF4545;
+}
+
+.selectDropdown option[value="Done"] {
+    color: #009444;
+}

@@ -1,0 +1,12 @@
+.sidebar {
+    height: 95vh;
+}
+@media screen and (max-width: 576px){
+    .sidebar{
+        height: 220px
+    }
+}
+
+.sidebar li, .sidebar img {
+    cursor: pointer;
+}
