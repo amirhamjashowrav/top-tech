@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 import Home from "./components/Home/Home/Home";
+import Projects from "./components/Home/Projects/Projects";
 import Login from "./components/Login/Login/Login";
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 
@@ -28,7 +29,13 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
+          <Route path="/projects">
+            <Projects></Projects>
+          </Route>
           <PrivateRoute path="/dashboard">
+            <Dashboard></Dashboard>
+          </PrivateRoute>
+          <PrivateRoute path="/admin">
             <Dashboard></Dashboard>
           </PrivateRoute>
         </Switch>

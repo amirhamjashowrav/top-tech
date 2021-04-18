@@ -36,8 +36,8 @@ const OrderDetail = ({ order }) => {
                     <button style={statusBtnStyles} className="btn">{status}</button>
                 </div>
                 <div>
-                    {orderList.map((info) => (
-                        <div>
+                    {orderList.map((info) =>(
+                        <div key={info._id}>
                             <p className="order-title mt-3">{info.shipment.service}</p>
                             <p style={{ color: 'rgba(0, 0, 0, 0.7)' }} className="text-secondary">Price: ${info.shipment.price}</p>
                         </div>

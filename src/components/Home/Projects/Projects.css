@@ -1,0 +1,31 @@
+.our-works {
+    height: 700px;
+    background: #12223e;
+    color: white;
+}
+
+@media screen and (max-width: 576px) {
+    .our-works{
+        height: 730px;
+    }
+}
+
+.works-title {
+    color: white;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 43px;
+    letter-spacing: 0.396px;
+}
+
+.works-title span {
+    color: cyan;
+}
+
+.owl-dots {
+    margin-top: 80px !important;
+}
+
+.owl-dots .active span{
+    background-color: cyan !important;
+}
