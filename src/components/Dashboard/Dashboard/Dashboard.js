@@ -7,12 +7,12 @@ import AddService from '../Admin/AddService/AddService';
 import AdminServiceList from '../Admin/AdminServiceList/AdminServiceList';
 import MakeAdmin from '../Admin/MakeAdmin/MakeAdmin';
 import Order from '../User/Order/Order';
-import ServiceList from '../User/ServiceList/ServiceList';
+import OrderDetail from '../User/OrderDetail/OrderDetail';
 import Review from '../User/Review/Review';
-
-//outside dashboard
+import ManageServices from '../Admin/ManageServices/ManageServices';
 
 const Dashboard = () => {
+    
     const decodedToken = jwt_decode(sessionStorage.getItem('token'));
     const { email, picture } = decodedToken
     const [isAdmin, setIsAdmin] = useState(false)
@@ -41,11 +41,12 @@ const Dashboard = () => {
                                 {navigation === 'Add Service' && <AddService />}
                                 {navigation === 'Admin Service list' && <AdminServiceList />}
                                 {navigation === 'Make Admin' && <MakeAdmin />}
+                                {navigation === 'Manage Services' && <ManageServices></ManageServices>}
                             </>
                             :
                             <>
-                                {navigation === 'Order' && <Order/>}
-                                {navigation === 'Service list' && <ServiceList />}
+                                {navigation === 'Order' && <Order></Order>}
+                                {navigation === 'Service list' && <OrderDetail></OrderDetail>}
                                 {navigation === 'Review' && <Review />}
                             </>
                     }

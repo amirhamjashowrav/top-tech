@@ -4,9 +4,8 @@ import { UserContext } from '../../../../App';
 import ProcessPayment from '../../../ProcessPayment/ProcessPayment';
 import './Order.css'
 
-
-
 const Order = () => {
+
     const { register, handleSubmit } = useForm();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [shippingData, setShippingData] = useState(null);
@@ -40,7 +39,6 @@ const Order = () => {
             })
     }
 
-
     return (
         <div className='order-container p-4'>
             <div className="container">
@@ -49,8 +47,8 @@ const Order = () => {
                         <form onSubmit={handleSubmit(onSubmit)} className="order-form form-group pt-3">
                             <input name="name" defaultValue={loggedInUser.name} ref={register({ required: true })} placeholder="Your name" className='form-control mb-3'/>
                             <input name="email" defaultValue={loggedInUser.email} ref={register({ required: true })} placeholder="email" className='form-control mb-3'/>
-                            <input required ref={register({ required: true })} placeholder='Graphic Design' className='form-control mb-3' type="text" name="service" id="" />
-                            <input required ref={register({ required: true })} placeholder='Price' className='form-control mb-3 d-inline mr-4' type="number" name="price" id="" /><br />
+                            <input ref={register({ required: true })} placeholder='Graphic Design' className='form-control mb-3' type="text" name="service" id="" />
+                            <input ref={register({ required: true })} placeholder='Price' className='form-control mb-3 d-inline mr-4' type="number" name="price" id="" /><br />
                             <button className="btn btn-primary mb-4">Send</button>
                         </form>
                     </div>

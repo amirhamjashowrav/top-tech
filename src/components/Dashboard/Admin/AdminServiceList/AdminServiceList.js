@@ -45,7 +45,7 @@ const AdminServiceList = () => {
                                     <span className="sr-only">Loading...</span>
                                 </div>
                                 :
-                                orders.map(order => <tr key={order._id} scope='row'>
+                                orders.map(order => <tr key={order._id}>
                                     <td>{order.shipment.name}</td>
                                     <td>{order.shipment.email}</td>
                                     <td>{order.shipment.service}</td>

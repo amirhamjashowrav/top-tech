@@ -1,7 +1,7 @@
 .order-card {
-    width: 415px;
-    height: 254px;
-    background: #FFFFFF;
+    width: 315px;
+    height: 210px;
+    background: #f4f7fc;
     border-radius: 20px
 }
 @media screen and (max-width: 576px) {

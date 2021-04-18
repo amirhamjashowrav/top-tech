@@ -36,6 +36,9 @@ const Sidebar = ({ navigation, setNavigation, isAdmin }) => {
                                 <li style={{ color: navigation === 'Make Admin' && "#009444" }} className='mb-3' onClick={() => setNavigation('Make Admin')}>
                                     <FontAwesomeIcon className='mr-2' style={{ fontSize: '18px' }} icon={faUserPlus} /> <span>Make Admin</span>
                                 </li>
+                                <li style={{ color: navigation === 'Manage Services' && "#009444" }} className='mb-3' onClick={() => setNavigation('Manage Services')}>
+                                    <FontAwesomeIcon className='mr-2' style={{ fontSize: '18px' }} icon={faUserPlus} /> <span>Manage Services</span>
+                                </li>
                             </>
                     }
                 </ul>
