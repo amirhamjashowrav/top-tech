@@ -10,7 +10,7 @@ const Review = () => {
 
     const onSubmit = data => {
         data.img = picture
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://limitless-woodland-17961.herokuapp.com/addReview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

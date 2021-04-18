@@ -15,7 +15,7 @@ const AddService = () => {
         formData.append('price', data.price)
         formData.append('description', data.description)
 
-        fetch('http://localhost:5000/addService', {
+        fetch('https://limitless-woodland-17961.herokuapp.com/addService', {
             method: 'POST',
             body: formData
         })

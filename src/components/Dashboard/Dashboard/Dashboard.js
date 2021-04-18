@@ -19,7 +19,7 @@ const Dashboard = () => {
     const [navigation, setNavigation] = useState(isAdmin ? 'Admin Service list' : 'Order');
 
     useEffect(() => {
-        fetch('http://localhost:5000/allAdmins/' + email)
+        fetch('https://limitless-woodland-17961.herokuapp.com/allAdmins/' + email)
             .then(res => res.json())
             .then(data => {
                 setIsAdmin(data)

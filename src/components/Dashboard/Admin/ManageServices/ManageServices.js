@@ -8,13 +8,13 @@ const ManageServices = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allServices')
+        fetch('https://limitless-woodland-17961.herokuapp.com/allServices')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
 
     const deleteService = (_id) => {
-        fetch(`http://localhost:5000/delete/${_id}`, {
+        fetch(`https://limitless-woodland-17961.herokuapp.com/delete/${_id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

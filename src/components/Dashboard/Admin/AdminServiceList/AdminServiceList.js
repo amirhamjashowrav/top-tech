@@ -6,14 +6,14 @@ const AdminServiceList = () => {
 
     const status = ['Pending', 'On Going', 'Done']
     useEffect(() => {
-        fetch('http://localhost:5000/allOrders')
+        fetch('https://limitless-woodland-17961.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
 
     const handleChange = (e) => {
         const data = { id: e.target.name, status: e.target.value }
-        fetch('http://localhost:5000/updateOrder', {
+        fetch('https://limitless-woodland-17961.herokuapp.com/updateOrder', {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

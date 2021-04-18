@@ -13,7 +13,7 @@ const OrderDetail = () => {
     const [orderList, setOrderList] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allOrders')
+        fetch('https://limitless-woodland-17961.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => setOrderList(data));
     }, [])

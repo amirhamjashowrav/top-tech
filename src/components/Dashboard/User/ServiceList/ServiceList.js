@@ -8,7 +8,7 @@ const ServiceList = () => {
     const decodedToken = jwt_decode(sessionStorage.getItem('token'));
     const { email } = decodedToken
     useEffect(() => {
-        fetch(`http://localhost:5000/userOrder/${email}`)
+        fetch(`https://limitless-woodland-17961.herokuapp.com/userOrder/${email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [email])
